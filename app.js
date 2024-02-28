@@ -35,10 +35,10 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
-app.post("/login",passport.authenticate("local", { failureRedirect: "/login" }),
+app.post("/login", passport.authenticate("local", { failureRedirect: "/login" }),
   function (req, res) {
-    return res.render("index",{
-      username:req.user.username
+    return res.render("index", {
+      username: req.user.username
     });
   }
 );
@@ -118,8 +118,8 @@ app.get("/signup", (req, res) => {
 // });
 
 mongoose.connect(
-    "mongodb+srv://priyanshgoyal:vanshpriyansh@cluster0.qts4i4o.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-  )
+  "mongodb+srv://priyanshgoyal:vanshpriyansh@cluster0.qts4i4o.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+)
   .then(() => {
     app.listen(PORT, () => {
       console.log(`http://localhost:` + PORT);
