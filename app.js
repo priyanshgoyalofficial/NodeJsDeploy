@@ -23,7 +23,7 @@ app.use(
     saveUninitialized: true,
     store: MongoStore.create({
       mongoUrl:
-        "mongodb+srv://priyansh:priyanshvansh@cluster0.w1vqwhi.mongodb.net/?retryWrites=true&w=majority",
+        "mongodb+srv://priyanshgoyal:vanshpriyansh@cluster0.qts4i4o.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
     }),
   })
 );
@@ -118,7 +118,7 @@ app.get("/signup", (req, res) => {
 // });
 
 mongoose.connect(
-    "mongodb+srv://priyansh:priyanshvansh@cluster0.w1vqwhi.mongodb.net/?retryWrites=true&w=majority"
+    "mongodb+srv://priyanshgoyal:vanshpriyansh@cluster0.qts4i4o.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
   )
   .then(() => {
     app.listen(PORT, () => {
